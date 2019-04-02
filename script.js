@@ -10,13 +10,13 @@ function rootReducer(state=initialState, action) {
         case 'INCREMENT':
             var newState = {...state };
             // let newState = Object.assign ({}, state); This would also work.
-            newState++;
+            newState.count++;
             return newState;
             
         case 'DECREMENT':
             var newState = {...state };
             
-            newState--;
+            newState.count--;
             return newState;
         default:
             return state;
