@@ -1,7 +1,7 @@
 //We need a reducer (rootReducer)
 
 const initialState = {
-    count:0
+    count: 0
 }
 
 function rootReducer(state=initialState, action) {
@@ -28,7 +28,7 @@ function rootReducer(state=initialState, action) {
 const store = Redux.createStore(rootReducer);
 
 //We need some way of changing the state
-
+/* global $ */
 $(document).ready(function(){
     let currentState = store.getState();
     $('#counter').text(currentState.count);
@@ -46,5 +46,5 @@ $(document).ready(function(){
         });
         let currentState = store.getState();
         $('#counter').text(currentState.count);
-    })
+    });
 })
